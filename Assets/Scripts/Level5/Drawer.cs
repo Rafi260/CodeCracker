@@ -12,6 +12,8 @@ public class Drawer : MonoBehaviour
 
     public GameObject UiCode;
     public bool left = true;
+    
+    
 
     public GameObject vellan, leftPos, rightPos;
 
@@ -23,8 +25,13 @@ public class Drawer : MonoBehaviour
         {
             StopAllCoroutines();
             Left();
-            manager.PlayWalk();
+
+
+            
             clicked = true;
+            if(player.transform.position != playerPosition.transform.position)
+                manager.PlayWalk();
+
             player.transform.DOMove(playerPosition.transform.position, 3).OnComplete(() =>
             {
                 manager.PlayIdle();

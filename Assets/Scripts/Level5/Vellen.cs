@@ -8,6 +8,7 @@ public class Vellen : MonoBehaviour
     float time;
     bool stopFiring = false;
     public Animator animator;
+    
 
     public void _Start()
     {

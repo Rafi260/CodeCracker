@@ -13,12 +13,17 @@ public class Bomb : MonoBehaviour
     Image imageSlider;
     void Start()
     {
+       
+        Jump();
+    }
+
+    void Awake()
+    {
         imageSlider = GameObject.FindGameObjectWithTag("slider").GetComponent<Image>();
         imageSlider.enabled = true;
         endPos = GameObject.FindGameObjectWithTag("Player").transform.position;
 
         endPos.y -= a;
-        Jump();
     }
 
     void Update()
@@ -27,7 +32,7 @@ public class Bomb : MonoBehaviour
         if(time < 0)
         {
             gameObject.GetComponent<CircleCollider2D>().enabled = true;
-            //imageSlider.enabled = false;
+            imageSlider.fillAmount = 0;
             Destroy(gameObject, .2f);
 
         }
