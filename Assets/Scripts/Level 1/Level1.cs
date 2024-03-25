@@ -124,6 +124,7 @@ public class Level1 : MonoBehaviour, NameGender
 
     public void PlayIdle()
     {
+        animator.SetBool("walk", false);
         if (animator != null)
             animator.Play("idle");
 
@@ -133,6 +134,7 @@ public class Level1 : MonoBehaviour, NameGender
 
     public void PlayWalk()
     {
+        animator.SetBool("walk", true);
         if (animator != null)
             animator.Play("walk");
 

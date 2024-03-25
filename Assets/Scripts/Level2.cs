@@ -172,6 +172,7 @@ public class Level2 : MonoBehaviour
 
     public void PlayIdle()
     {
+        animator.SetBool("walk", false);
         if (animator != null)
             animator.Play("idle");
 
@@ -180,6 +181,7 @@ public class Level2 : MonoBehaviour
 
     public void PlayWalk()
     {
+        animator.SetBool("walk", true);
         if (animator != null)
             animator.Play("walk");
 
