@@ -13,7 +13,7 @@ public class BuildingSpawner : MonoBehaviour
     bool startSpawning = false;
     public GameObject winWindow, loseWindow;
     public GameObject male, female, baloon;
-
+    public LinishLine finishLine;
     private void Start()
     {
         if (male != null && female != null)
@@ -44,6 +44,8 @@ public class BuildingSpawner : MonoBehaviour
         }
     }
 
+    bool finishLineSpawned = false;
+
     private void Update()
     {
         if (startSpawning)
@@ -64,9 +66,16 @@ public class BuildingSpawner : MonoBehaviour
             if (gameTime <= 0 && !loseWindow.activeSelf)
             {
                 StopSpawn();
-                baloon.GetComponent<BoxCollider2D>().enabled = false;
+                //
 
-                winWindow.SetActive(true);
+                //winWindow.SetActive(true);
+                if(!finishLineSpawned)
+                {
+                    finishLineSpawned = true;
+                    baloon.GetComponent<BoxCollider2D>().enabled = false;
+                    finishLine.go = true;
+                }
+                
             }
         }
        
@@ -75,6 +84,8 @@ public class BuildingSpawner : MonoBehaviour
     public void Spawn()
     {
         startSpawning = true;
+        int a = Random.Range(0, buildings.Count);
+        Instantiate(buildings[a], transform.position, Quaternion.identity);
     }
     public void StopSpawn()
     {
