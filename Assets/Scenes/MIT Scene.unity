@@ -2057,7 +2057,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 471.2107, y: 50}
+  m_SizeDelta: {x: 203.6364, y: 50}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1807804132
 MonoBehaviour:
@@ -2081,15 +2081,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Welcome '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 1246eb959f4487645a3827ea5a82b3e7, type: 2}
-  m_sharedMaterial: {fileID: 5245842223744511148, guid: 1246eb959f4487645a3827ea5a82b3e7, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 860c146532b9c5842b5bbd9dba8aa686, type: 2}
+  m_sharedMaterial: {fileID: 5405858481806390440, guid: 860c146532b9c5842b5bbd9dba8aa686, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4282711808
-  m_fontColor: {r: 0, g: 1, b: 0.26549292, a: 1}
+    rgba: 4278241023
+  m_fontColor: {r: 1, g: 0.7781534, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2106,14 +2106,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 25
+  m_fontSizeBase: 25
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -2122,7 +2122,7 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_enableWordWrapping: 0
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
