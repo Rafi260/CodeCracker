@@ -9,10 +9,10 @@ public class Level4 : MonoBehaviour
     public List<string> equations;
     public List<int> answers;
 
-    public TMP_Text equationsText, namePiece;
+    public TMP_Text equationsText, namePiece, namePiece2;
     public TMP_InputField ansInputField;
-
-   
+    public GameSounds sounds;
+    public GameObject FullCode;
 
     int currentEquation;
 
@@ -51,6 +51,7 @@ public class Level4 : MonoBehaviour
         if (PlayerPrefs.HasKey("name"))
         {
             nameText.text = PlayerPrefs.GetString("name");
+            namePiece2.text = PlayerPrefs.GetString("name");
         }
     }
 
@@ -61,6 +62,8 @@ public class Level4 : MonoBehaviour
         if(ans == answers[currentEquation])
         {
             text.text = "printf(\"My name is " + PlayerPrefs.GetString("name") + "\");" ;
+            sounds.PlaySuccess();
+            FullCode.SetActive(true);
             correctWindow.SetActive(true);
         }
         else

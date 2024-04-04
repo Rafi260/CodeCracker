@@ -11,7 +11,7 @@ public class Manager : MonoBehaviour
     bool  bTime = true;
     Animator animator;
     public GameObject male, female, player;
-
+    public GameSounds sounds;
     public void inc()
     {
         print("inc");
@@ -20,6 +20,7 @@ public class Manager : MonoBehaviour
         {
             bTime = false;
             player.GetComponent<BoxCollider2D>().enabled = false;
+            sounds.PlaySuccess();
             win.SetActive(true);
         }
     }

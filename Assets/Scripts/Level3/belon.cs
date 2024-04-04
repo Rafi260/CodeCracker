@@ -7,6 +7,7 @@ public class belon : MonoBehaviour
     public GameObject winWindow;
     Animator animator;
     public GameObject male, female;
+    public GameSounds sounds;
 
     private void Start()
     {
@@ -27,6 +28,7 @@ public class belon : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("table")) { 
             gameObject.GetComponent<CircleCollider2D>().enabled = false;
+            sounds.PlaySuccess();
             winWindow.SetActive(true); }
     }
 

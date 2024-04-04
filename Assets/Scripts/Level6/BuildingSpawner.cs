@@ -14,6 +14,9 @@ public class BuildingSpawner : MonoBehaviour
     public GameObject winWindow, loseWindow;
     public GameObject male, female, baloon;
     public LinishLine finishLine;
+    public GameSounds sounds;
+
+    bool stopSpawning = false;
     private void Start()
     {
         if (male != null && female != null)
@@ -77,6 +80,10 @@ public class BuildingSpawner : MonoBehaviour
                 }
                 
             }
+        }
+        else
+        {
+            timetext.text = "00";
         }
        
     }

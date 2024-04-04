@@ -17,8 +17,9 @@ public class Level1 : MonoBehaviour, NameGender
     public GameObject male, female, beloonWala;
 
     public RectTransform Target;
+    public GameSounds sounds;
 
-   
+
 
     public Animation playerWinAnimation;
   
@@ -40,7 +41,8 @@ public class Level1 : MonoBehaviour, NameGender
         }
 
         if (animator != null)
-            animator.Play("walk");
+            PlayWalk();
+
 
     }
 
@@ -78,6 +80,7 @@ public class Level1 : MonoBehaviour, NameGender
 
     void Win()
     {
+        sounds.PlaySuccess();
         winScreen.SetActive(true);
     }
 
@@ -160,7 +163,7 @@ public class Level1 : MonoBehaviour, NameGender
     {
         float minDistance = 10000000;
         int index = -1;
-
+        sounds.PlayShot();
 
         for (int i=0;i<beloons.Count;i++)
         {

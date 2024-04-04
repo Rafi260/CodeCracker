@@ -11,6 +11,10 @@ public class Bomb : MonoBehaviour
     public float time,a;
     float currentTime;
     Image imageSlider;
+
+    
+    public GameSounds sounds;
+
     void Start()
     {
        
@@ -31,6 +35,7 @@ public class Bomb : MonoBehaviour
         time -= Time.deltaTime;
         if(time < 0)
         {
+            sounds.PlayExplosion();
             gameObject.GetComponent<CircleCollider2D>().enabled = true;
             imageSlider.fillAmount = 0;
             Destroy(gameObject, .2f);

@@ -14,8 +14,8 @@ public class Level2 : MonoBehaviour
     public GameObject collectionPoint,lastPoint, instractionWindow;
 
     Animator animator;
-    public
-    
+
+    public GameSounds sounds;
 
     int hitCount=0;
 
@@ -33,7 +33,7 @@ public class Level2 : MonoBehaviour
         }
 
         if (animator != null)
-            animator.Play("walk");
+            PlayWalk();
     }
     public void Switch()
     {
@@ -129,17 +129,19 @@ public class Level2 : MonoBehaviour
             _braces.transform.DOMove(bracLoc.transform.position, 1f);
 
             hitButton.SetActive(false);
+            sounds.PlaySuccess();
             StartCoroutine(Collect());
         }
 
         animator.Play("hit");
-
+        sounds.PlayHammer();
         
     }
 
     IEnumerator Collect()
     {
         yield return new WaitForSeconds(2);
+
         winScreen.SetActive(true );
     }
 

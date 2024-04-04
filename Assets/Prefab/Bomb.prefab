@@ -96,6 +96,7 @@ GameObject:
   - component: {fileID: 7211532580068672218}
   - component: {fileID: 5152775717823315340}
   - component: {fileID: 4385381517305029778}
+  - component: {fileID: 6696814553724255712}
   m_Layer: 0
   m_Name: Bomb
   m_TagString: bullet
@@ -133,6 +134,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   time: 5
   a: 1.2
+  sounds: {fileID: 6696814553724255712}
 --- !u!58 &5152775717823315340
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -195,3 +197,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &6696814553724255712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 276240187067366199}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46c8d214da16b0341b10573c4ce63aca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  success: {fileID: 0}
+  explosion: {fileID: 8300000, guid: 084a732f46a7b074fa865fa961f44631, type: 3}
+  crystalBreak: {fileID: 0}
+  buttonTap: {fileID: 0}
+  gunShot: {fileID: 0}

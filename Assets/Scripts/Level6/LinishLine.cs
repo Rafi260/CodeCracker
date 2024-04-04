@@ -7,6 +7,7 @@ public class LinishLine : MonoBehaviour
     public GameObject winWindow;
     public bool go = false;
     public float speed;
+    public GameSounds sounds;
     private void FixedUpdate()
     {
         if(go) 
@@ -18,7 +19,7 @@ public class LinishLine : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-
+            sounds.PlaySuccess();
             winWindow.SetActive(true);
         }
     }
