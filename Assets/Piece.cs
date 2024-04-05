@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 
 public class Piece : MonoBehaviour
@@ -5,10 +6,11 @@ public class Piece : MonoBehaviour
     public int ID;
     private bool attached = false;
     private Vector3 startPosition;
-
+    public TMP_Text name;
     void Start()
     {
         startPosition = transform.position;
+        if (name != null) name.text = $"My name is {PlayerPrefs.GetString("userName", "user1")}";
     }
 
     void OnMouseDown()
@@ -40,7 +42,6 @@ public class Piece : MonoBehaviour
    
     public void Attach(PuzzlePieceHolder pHolder)
     {
-        pHolder.Attach(transform);
         attached = true;
     }
 }

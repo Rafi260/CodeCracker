@@ -6,9 +6,15 @@ public class PuzzlePieceHolder : MonoBehaviour
 {
     public int ID;
     
+    public PuzzleManager manager;
 
+    private void Awake()
+    {
+        manager = FindAnyObjectByType<PuzzleManager>();
+    }
     public void Attach(Transform pieceTransform)
     {
+        manager.placedPuzzlePieceCount++;
         pieceTransform.parent = this.transform;
         pieceTransform.localPosition = Vector3.zero;
         pieceTransform.localRotation = Quaternion.identity;
@@ -19,11 +25,12 @@ public class PuzzlePieceHolder : MonoBehaviour
     {
         if (collider.gameObject.layer == 6)
         {
-            Piece pHolder = collider.gameObject.GetComponent<Piece>();
+            Piece puzzlePiece = collider.gameObject.GetComponent<Piece>();
             print("Hiiii");
-            if (pHolder != null && pHolder.ID == ID)
+            if (puzzlePiece != null && puzzlePiece.ID == ID)
             {
-                pHolder.Attach(this);
+                puzzlePiece.Attach(this);
+                Attach(puzzlePiece.transform);
             }
         }
     }
