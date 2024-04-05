@@ -51,7 +51,7 @@ public class Level4 : MonoBehaviour
         if (PlayerPrefs.HasKey("name"))
         {
             nameText.text = PlayerPrefs.GetString("name");
-            namePiece2.text = PlayerPrefs.GetString("name");
+            namePiece2.text = "printf (\" My name is " + PlayerPrefs.GetString("name")+ "\");";
         }
     }
 
