@@ -9,11 +9,13 @@ public class PuzzleManager : MonoBehaviour
     public int placedPuzzlePieceCount;
     public Transform leftGate, rightGate;
     public GameObject gameEndScene;
+    public GameObject spark;
     IEnumerator Start()
     {
         yield return new WaitUntil(()=> placedPuzzlePieceCount >= 6);
-        leftGate.DOMoveX(-1.36f, 0.5f);
-        rightGate.DOMoveX(-1.36f, 0.5f).OnComplete(() => { 
+        spark.SetActive(true);
+        leftGate.DOMoveX(-1.36f, 3f);
+        rightGate.DOMoveX(-1.36f, 3f).OnComplete(() => { 
         
             gameEndScene.SetActive(true);
         
