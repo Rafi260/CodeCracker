@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GameSounds : MonoBehaviour
 {
-    public AudioClip success, explosion, crystalBreak, buttonTap, gunShot;
+    public AudioClip success, success2, explosion, crystalBreak, buttonTap, gunShot;
     AudioSource audioSource;
     void Start()
     {
@@ -15,6 +15,10 @@ public class GameSounds : MonoBehaviour
     public void PlaySuccess()
     {
         audioSource.PlayOneShot(success);
+    }
+    public void PlaySuccess2()
+    {
+        audioSource.PlayOneShot(success2);
     }
     public void PlayExplosion()
     {

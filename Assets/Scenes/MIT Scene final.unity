@@ -353,6 +353,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 5
   manager: {fileID: 2080363075}
+  sound: {fileID: 619539594}
 --- !u!50 &92927819
 Rigidbody2D:
   serializedVersion: 4
@@ -700,6 +701,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 1
   manager: {fileID: 2080363075}
+  sound: {fileID: 619539594}
 --- !u!50 &100750435
 Rigidbody2D:
   serializedVersion: 4
@@ -873,6 +875,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 3
   manager: {fileID: 2080363075}
+  sound: {fileID: 619539594}
 --- !u!50 &100804067
 Rigidbody2D:
   serializedVersion: 4
@@ -2167,6 +2170,7 @@ GameObject:
   m_Component:
   - component: {fileID: 619539592}
   - component: {fileID: 619539593}
+  - component: {fileID: 619539594}
   m_Layer: 0
   m_Name: Place Holder
   m_TagString: Untagged
@@ -2248,6 +2252,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &619539594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 619539591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46c8d214da16b0341b10573c4ce63aca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  success: {fileID: 0}
+  success2: {fileID: 8300000, guid: ca10c7d38e96f354aa649d9a1c98099d, type: 3}
+  explosion: {fileID: 0}
+  crystalBreak: {fileID: 0}
+  buttonTap: {fileID: 0}
+  gunShot: {fileID: 0}
 --- !u!1 &670610041
 GameObject:
   m_ObjectHideFlags: 0
@@ -2469,6 +2491,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 2
   manager: {fileID: 2080363075}
+  sound: {fileID: 619539594}
 --- !u!50 &720284469
 Rigidbody2D:
   serializedVersion: 4
@@ -2828,6 +2851,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 6
   manager: {fileID: 2080363075}
+  sound: {fileID: 619539594}
 --- !u!50 &842260085
 Rigidbody2D:
   serializedVersion: 4
@@ -9419,6 +9443,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 4
   manager: {fileID: 2080363075}
+  sound: {fileID: 619539594}
 --- !u!50 &1499348017
 Rigidbody2D:
   serializedVersion: 4

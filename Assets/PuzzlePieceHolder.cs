@@ -7,6 +7,7 @@ public class PuzzlePieceHolder : MonoBehaviour
     public int ID;
     
     public PuzzleManager manager;
+    public GameSounds sound;
 
     private void Awake()
     {
@@ -18,6 +19,8 @@ public class PuzzlePieceHolder : MonoBehaviour
         pieceTransform.parent = this.transform;
         pieceTransform.localPosition = Vector3.zero;
         pieceTransform.localRotation = Quaternion.identity;
+        //print("g");
+        sound.PlaySuccess2();
     }
 
 
@@ -26,7 +29,7 @@ public class PuzzlePieceHolder : MonoBehaviour
         if (collider.gameObject.layer == 6)
         {
             Piece puzzlePiece = collider.gameObject.GetComponent<Piece>();
-            print("Hiiii");
+            //print("Hiiii");
             if (puzzlePiece != null && puzzlePiece.ID == ID)
             {
                 puzzlePiece.Attach(this);
