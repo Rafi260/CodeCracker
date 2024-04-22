@@ -18,10 +18,15 @@ public class Drawer : MonoBehaviour
     public GameObject vellan, leftPos, rightPos;
 
     bool clicked = false;
+    DrawerManager drawerManager;
 
+    private void Start()
+    {
+        drawerManager = GetComponentInParent<DrawerManager>();
+    }
     private void OnMouseDown()
     {
-        if(!clicked)
+        if(!clicked && drawerManager.gameStarted)
         {
             StopAllCoroutines();
             Left();

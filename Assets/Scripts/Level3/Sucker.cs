@@ -10,13 +10,17 @@ public class Sucker : MonoBehaviour
     Rigidbody2D rb;
 
     bool moveWithCarsor = false;
-
+    bool gameStarted = false;
     private void Start()
     {
-       rb = beloon.GetComponent<Rigidbody2D>();
+        gameStarted = false;
+        rb = beloon.GetComponent<Rigidbody2D>();
     }
 
-
+    public void GameStartFun()
+    {
+        gameStarted = true;
+    }
     private void OnMouseDown()
     {
         moveWithCarsor = true;
@@ -29,6 +33,9 @@ public class Sucker : MonoBehaviour
 
     private void Update()
     {
+        if (!gameStarted) return;
+
+
         if(moveWithCarsor)
         {
             Vector2 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);

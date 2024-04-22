@@ -11,6 +11,10 @@ public class LevelLoader : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().name.ToString());
     }
 
+    public void LevelLobby()
+    {
+        StartCoroutine(PAniumation("Lobby"));
+    }
     public void Level1()
     {
         StartCoroutine(PAniumation("Level1"));
