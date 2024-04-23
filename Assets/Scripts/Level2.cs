@@ -94,17 +94,18 @@ public class Level2 : MonoBehaviour
     public void GoToOrb()
     {
         LeftRight();
-        PlayWalk();
+        //PlayWalk();
+        animator.Play("hammerWalk");
         male.transform.DOMove(pos5.transform.position, 1f).OnComplete(() =>
         {
             hitButton.SetActive(true);
-            PlayIdle();
+            animator.Play("hammerIdle");
 
         });
         female.transform.DOMove(pos5.transform.position, 1f).OnComplete(() =>
         {
             hitButton.SetActive(true);
-            PlayIdle();
+            animator.Play("hammerIdle");
 
         });
     }

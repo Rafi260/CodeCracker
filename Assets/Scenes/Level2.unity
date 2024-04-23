@@ -5368,7 +5368,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: d58e6ead3f81d4341b6990e1a9d79d55, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 85e5addba6c0a2c4c8cdbda9e5828073, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -6619,6 +6619,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   success: {fileID: 8300000, guid: baa8d4e6c05b0644d9ee5d1665d44126, type: 3}
+  success2: {fileID: 0}
   explosion: {fileID: 8300000, guid: 084a732f46a7b074fa865fa961f44631, type: 3}
   crystalBreak: {fileID: 8300000, guid: 76fa2c7b66182a946b666d79c27beb14, type: 3}
   buttonTap: {fileID: 8300000, guid: e8b18a0dd7c8bd34499216d0ebe7568c, type: 3}

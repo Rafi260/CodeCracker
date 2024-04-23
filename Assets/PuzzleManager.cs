@@ -13,17 +13,26 @@ public class PuzzleManager : MonoBehaviour
     public GameObject spark;
 
     public VideoPlayer player;
+    public GameObject lastImag;
     IEnumerator Start()
     {
         yield return new WaitUntil(()=> placedPuzzlePieceCount >= 6);
         spark.SetActive(true);
         player.Play();
+        Invoke("ShowLast", 3);
+
+
      /*   leftGate.DOMoveX(-1.36f, 3f);
         rightGate.DOMoveX(-1.36f, 3f).OnComplete(() => { 
         
             gameEndScene.SetActive(true);
         
         });*/
+    }
+
+    void ShowLast()
+    {
+        lastImag.SetActive(true);
     }
 
     // Update is called once per frame

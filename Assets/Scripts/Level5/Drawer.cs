@@ -12,7 +12,9 @@ public class Drawer : MonoBehaviour
 
     public GameObject UiCode;
     public bool left = true;
-    
+
+
+    public GameObject fingetrTap;
     
 
     public GameObject vellan, leftPos, rightPos;
@@ -26,6 +28,11 @@ public class Drawer : MonoBehaviour
     }
     private void OnMouseDown()
     {
+
+        if(fingetrTap != null)
+        {
+            fingetrTap.SetActive(false);
+        }
         if(!clicked && drawerManager.gameStarted)
         {
             StopAllCoroutines();

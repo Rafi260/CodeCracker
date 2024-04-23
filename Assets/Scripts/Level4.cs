@@ -24,9 +24,16 @@ public class Level4 : MonoBehaviour
     Animator animator;
     public GameObject male, female;
 
+    int a;
+
     private void Start()
     {
-        GetRandomEquation();
+        ansInputField.text = null;
+        a = Random.Range(0, equations.Count);
+        equationsText.text = equations[a];
+
+
+        //GetRandomEquation();
         if (GetGender() == 0)
         {
             male.SetActive(true);
@@ -40,11 +47,18 @@ public class Level4 : MonoBehaviour
         GetName(namePiece);
     }
 
+
+
     public void GetRandomEquation()
     {
-        ansInputField.text = null;
+        /*ansInputField.text = null;
         currentEquation = Random.Range(0, equations.Count);
-        equationsText.text = equations[currentEquation];
+        equationsText.text = equations[currentEquation];*/
+
+        a++;
+        ansInputField.text = null;
+        equationsText.text = equations[a % equations.Count];
+
     }
     public void GetName(TMP_Text nameText)
     {
@@ -59,7 +73,7 @@ public class Level4 : MonoBehaviour
     {
         int ans = int.Parse( ansInputField.text);
 
-        if(ans == answers[currentEquation])
+        if(ans == answers[a % equations.Count])
         {
             text.text = "printf(\"My name is " + PlayerPrefs.GetString("name") + "\");" ;
             sounds.PlaySuccess();
