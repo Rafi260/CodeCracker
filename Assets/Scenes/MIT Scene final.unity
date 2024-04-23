@@ -10021,7 +10021,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1637005932
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10868,6 +10868,7 @@ MonoBehaviour:
   rightGate: {fileID: 1873692610}
   gameEndScene: {fileID: 1413314223}
   spark: {fileID: 214592866}
+  videoObj: {fileID: 1637005931}
   player: {fileID: 1641275009}
   lastImag: {fileID: 1413314223}
 --- !u!1660057539 &9223372036854775807

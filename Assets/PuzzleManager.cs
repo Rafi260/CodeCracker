@@ -12,12 +12,14 @@ public class PuzzleManager : MonoBehaviour
     public GameObject gameEndScene;
     public GameObject spark;
 
+    public GameObject videoObj;
     public VideoPlayer player;
     public GameObject lastImag;
     IEnumerator Start()
     {
         yield return new WaitUntil(()=> placedPuzzlePieceCount >= 6);
         spark.SetActive(true);
+        videoObj.SetActive(true);
         player.Play();
         Invoke("ShowLast", 3);
 
