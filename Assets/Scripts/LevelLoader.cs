@@ -46,6 +46,11 @@ public class LevelLoader : MonoBehaviour
         StartCoroutine(PAniumation("MIT Scene final"));
 
     }
+    public void Exit()
+    {
+        Application.Quit();
+    }
+
 
     IEnumerator PAniumation(string Level)
     {

@@ -19,17 +19,17 @@ public class PuzzleManager : MonoBehaviour
     {
         yield return new WaitUntil(()=> placedPuzzlePieceCount >= 6);
         spark.SetActive(true);
-        videoObj.SetActive(true);
-        player.Play();
-        Invoke("ShowLast", 3);
+        
+        
+        
 
 
-     /*   leftGate.DOMoveX(-1.36f, 3f);
-        rightGate.DOMoveX(-1.36f, 3f).OnComplete(() => { 
+      leftGate.DOMoveX(-1.36f, 3f);
+        rightGate.DOMoveX(1f, 3f).OnComplete(() => { 
         
             gameEndScene.SetActive(true);
         
-        });*/
+        });
     }
 
     void ShowLast()
