@@ -8,7 +8,7 @@ public class Vellen : MonoBehaviour
     float time;
     bool stopFiring = false;
     public Animator animator;
-    
+    public float fireRate = 5;
 
     public void _Start()
     {
@@ -19,7 +19,7 @@ public class Vellen : MonoBehaviour
     {
         while(!stopFiring)
         {
-            yield return new WaitForSeconds(5f);
+            yield return new WaitForSeconds(fireRate);
             Instantiate(bullet, transform.position, Quaternion.identity);
             animator.Play("fire");
         }

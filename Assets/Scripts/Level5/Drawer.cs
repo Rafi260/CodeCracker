@@ -14,13 +14,14 @@ public class Drawer : MonoBehaviour
     public bool left = true;
 
 
-    public GameObject fingetrTap;
+    public GameObject fingetrTap0, fingetrTap1, fingetrTap2, fingetrTap3, fingetrTap4;
     
 
     public GameObject vellan, leftPos, rightPos;
 
     bool clicked = false;
     DrawerManager drawerManager;
+    public GameSounds soundManager;
 
     private void Start()
     {
@@ -29,9 +30,13 @@ public class Drawer : MonoBehaviour
     private void OnMouseDown()
     {
 
-        if(fingetrTap != null)
+        if(fingetrTap0 != null)
         {
-            fingetrTap.SetActive(false);
+            fingetrTap0.SetActive(false);
+            fingetrTap1.SetActive(false);
+            fingetrTap2.SetActive(false);
+            fingetrTap3.SetActive(false);
+            fingetrTap4.SetActive(false);
         }
         if(!clicked && drawerManager.gameStarted)
         {
@@ -60,6 +65,7 @@ public class Drawer : MonoBehaviour
             {
                 codeSection.gameObject.SetActive(true);
                 UiCode.SetActive(true);
+                soundManager.PlaySuccess();
             }
         }
       
