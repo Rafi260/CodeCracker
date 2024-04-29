@@ -447,7 +447,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Ride this hot air balloon for 20 seconds and avoid obstacles
+  m_text: Ride this hot air balloon for 30 seconds and avoid obstacles
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8ecd17aeceaba4c10b42ac497ccbfcff, type: 2}
   m_sharedMaterial: {fileID: 2830636965969884548, guid: 8ecd17aeceaba4c10b42ac497ccbfcff, type: 2}
@@ -2880,7 +2880,7 @@ MonoBehaviour:
   - {fileID: 2996322044808213530, guid: 6aa73b6ae848de24f962e6d11bd9b1df, type: 3}
   - {fileID: 2996322044808213530, guid: 4bbd3e2f951db6944ba7bc1a218b1c16, type: 3}
   spawnInterval: 1.5
-  gameTime: 20
+  gameTime: 30
   timetext: {fileID: 1025164025}
   winWindow: {fileID: 792617695}
   loseWindow: {fileID: 1624617227}
