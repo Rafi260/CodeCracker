@@ -132,7 +132,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd4ee6b432a118642a67c53cf220719f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  time: 3
+  time: 2
   a: 1.2
   sounds: {fileID: 6696814553724255712}
 --- !u!58 &5152775717823315340
